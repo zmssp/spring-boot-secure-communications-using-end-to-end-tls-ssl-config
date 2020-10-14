@@ -1,0 +1,10 @@
+application:
+    message: Hello, %s! --- Configured by Spring Cloud Config Server
+
+server:
+  servlet:
+    context-path: /greeting
+
+feign:
+  hystrix:
+    enabled: true
