@@ -13,3 +13,9 @@ spring:
           uri: https://${GREETING_SERVICE}/
           predicates:
             - Path=/greeting/**
+
+azure:
+  keyvault:
+    jca:
+      overrideTrustManagerFactory: true
+      disableHostnameVerification: true
