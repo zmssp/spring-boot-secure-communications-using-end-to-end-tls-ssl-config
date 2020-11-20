@@ -1,9 +1,9 @@
 application:
-    message: Hello, %s! --- Configured by Spring Cloud Config Server
-    external:
-      service:
-        endpoint: ${EXTERNAL_SERVICE_ENDPOINT}
-        port: ${EXTERNAL_SERVICE_PORT}
+  message: Hello, %s! --- Configured by Spring Cloud Config Server
+  external:
+    service:
+      endpoint: ${EXTERNAL_SERVICE_ENDPOINT}
+      port: ${EXTERNAL_SERVICE_PORT}
 
 spring:
   webflux:

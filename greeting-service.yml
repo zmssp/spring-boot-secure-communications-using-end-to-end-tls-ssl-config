@@ -1,5 +1,5 @@
 application:
-    message: Hello, %s! --- Configured by Spring Cloud Config Server
+  message: Hello, %s! --- Configured by Spring Cloud Config Server
 
 server:
   servlet:

@@ -6,11 +6,11 @@ spring:
           useInsecureTrustManager: true
       routes:
         - id: greeting-external
-          uri: https://${GREETING_EXTERNAL_SERVICE}/
+          uri: lb:https://greeting-external-service
           predicates:
             - Path=/greeting-external/**
         - id: greeting
-          uri: https://${GREETING_SERVICE}/
+          uri: lb:https://greeting-service
           predicates:
             - Path=/greeting/**
 
