@@ -1,21 +1,19 @@
 spring:
   cloud:
     gateway:
-      httpclient:
-        ssl:
-          useInsecureTrustManager: true
       routes:
         - id: greeting-external
-          uri: lb:https://greeting-external-service
+          uri: lb://greeting-external-service/
           predicates:
             - Path=/greeting-external/**
         - id: greeting
-          uri: lb:https://greeting-service
+          uri: lb://greeting-service/
           predicates:
             - Path=/greeting/**
+      httpserver:
+        wiretap: true
+      httpclient:
+        wiretap: true
 
-azure:
-  keyvault:
-    jca:
-      overrideTrustManagerFactory: true
-      disableHostnameVerification: true
+reactor:
+  netty: INFO

@@ -1,3 +1,24 @@
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+    shutdown:
+      enabled: true
+
+eureka:
+  instance:
+    nonSecurePortEnabled: false
+    securePortEnabled: true
+
+spring:
+  jmx:
+    enabled: true
+
+logging:
+  level:
+    root: INFO
+
 server:
   tomcat:
     accesslog:
@@ -9,11 +30,3 @@ server:
       file-date-format:
       request-attributes-enabled: true
       pattern: "[ACCESS] %h %l %u %t %r %s %b"
-
-management:
-  endpoints:
-    web:
-      exposure:
-        include: "*"
-    shutdown:
-      enabled: true
