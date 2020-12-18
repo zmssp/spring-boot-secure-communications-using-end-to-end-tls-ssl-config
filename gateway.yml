@@ -7,7 +7,7 @@ spring:
           predicates:
             - Path=/greeting-external/**
         - id: greeting
-          uri: lb:https://greeting-service
+          uri: https://greeting-service
           predicates:
             - Path=/greeting/**
       httpserver:
